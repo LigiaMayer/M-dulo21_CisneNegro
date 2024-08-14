@@ -1,9 +1,7 @@
 @use 'var';
 
-@keyframes heroAnim {
-    from {opacity: 0; transform: translate3d(0, 2em, 0);}
-    to {opacity: 1; transform: none;}
-}
+
+
 
 .hero {
     padding: 5.6vw;
