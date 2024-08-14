@@ -25,21 +25,13 @@
                 @media (max-width: 768px) {
                     padding-bottom: 30px;
                 }
-                &.in-view {
-                    animation: anim 1.5s .2s ease-out both running;
-                }
+
             }
-            h3 {
-                &.in-view {
-                    animation: anim 0.4s .2s ease-out both running;
-                }
-            }
+            
         }
 
         &__image {
-            &.in-view {
-                animation: anim 0.4s .2s ease-out both running;
-            }
+
             img {
             max-width: 80%;
             }

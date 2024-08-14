@@ -24,9 +24,7 @@
     &__content {
         max-width: 640px;
 
-        &.in-view {
-            animation: heroAnim 0.4s .2s ease-out both running;
-        }
+         
         
         &__branding {
             max-width: 460px;
@@ -40,7 +38,7 @@
             }
         }
 
-        &__disneyplus{
+        &__disney+{
             a {
                 img {
                     max-width: 56px;
