@@ -1,0 +1,78 @@
+@use 'col';
+
+.about {
+    background-color: $bgColor;
+    padding-top: 60px;
+
+    &__header {
+        &--img {
+            display: flex;
+            width: 200px;
+            height: 200px;
+            margin: auto;
+            padding-bottom: 24px;
+            opacity: 90%;
+            animation: fadeInOut 10s infinite;
+    
+            @keyframes fadeInOut {
+                0% {
+                    opacity: 1;
+                }
+                50% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+
+            @media (max-width: 768px) {
+                width: 25px;
+                height: 25px;
+                padding-top: 24px;
+            }
+        }
+
+        &--imgCenter {
+            width: 100%;
+        }
+    }
+
+    h1 {
+        display: flex;
+        color: $textColorPri;
+        padding: 16px;
+        margin-left: 16px;
+        font-family: variaveis.$fontMain;
+
+        @media (max-width: 768px) {
+            visibility: hidden;
+        }
+    }
+
+    .about__list__item--flows {
+        display: none;
+        padding-left: 20px;
+        color: $highlightColor;
+        font-family: variaveis.$fontMain;
+    }
+
+    .about__list__item--is-open .about__list__item--flows {
+        display: block;
+    }
+
+    .about__list__item--flow {
+        cursor: pointer;
+        background-color: $textColorSec;
+        padding: 10px;
+        border-radius: 5px;
+        color: $textColorPri;
+        margin: 15px;
+        font-family: variaveis.$fontMain;
+    }
+
+    .about__list__item--flow:hover {
+        background-color: $highlightColor;
+        color: $bgColor;
+    }
+}

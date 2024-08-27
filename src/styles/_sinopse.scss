@@ -1,0 +1,49 @@
+
+@use 'col';
+
+.synopsis {
+    max-width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 50px;
+
+    @media (max-width: 768px) {
+        display: block;
+        margin-bottom: 2em;
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+        display: block;
+    }
+
+    &__content {
+        max-width: 100%;
+        background-color: $borderShadowColor;
+        padding: 50px 25px;
+        border-radius: 12px;
+        margin: auto 0;
+
+        @media (max-width: 768px) {
+            padding: 15px;
+        }
+
+        h2 {
+            color: $textColorPri; 
+            margin-bottom: .5em;
+        }
+
+        p {
+            color: $textColorPri; 
+        }
+    }
+
+    &__image {
+        margin: auto 0;
+
+        img {
+            max-width: 100%;
+            padding: 25px;
+        }
+    }
+}

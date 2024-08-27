@@ -1,82 +1,95 @@
-@use 'var';
 @use 'hero';
-@use 'plot';
-@use 'chars';
+@use 'synopsis';
+@use 'personagens';
+@use 'available_devices';
+@use 'faq';
 @use 'footer';
+@use 'header';
+
+@font-face {
+    font-family: Saira Condensed;
+    src: url(../../assets/fonts/SairaCondensed-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Saira Condensed;
+    src: url(../../assets/fonts/SairaCondensed-Bold.ttf);
+    font-weight: 700;
+}
+
+$bgColor: #1a1a1a;
+$textColorPri: #e8e8e8;
+$textColorSec: #8a4b2e;
+$highlightColor: #d2b3b0;
+$borderShadowColor: #333333;
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Libre Baskerville", serif;
+    font-family: Saira Condensed;
+    font-weight: bold;
+    list-style: none;
 }
 
 body {
-    background-color: var.$bgColor;
+    background-color: $bgColor;
+    color: $textColorPri;
 }
 
-@mixin text($fontSize: 18px) {
-    font-size: $fontSize;
-    line-height: $fontSize + 10px;
-    color: var.$textColorPri;
+@mixin text($font-size: 16px) {
+    font-size: $font-size;
+    line-height: $font-size + 10px;
+    color: $textColorPri;
 }
 
-@mixin title($fontSize: 40px) {
-    @include text($fontSize);
-    color: var.$textColorPri;
+@mixin title($fontsize: 40px) {
+    @include text($fontsize);
+    color: $textColorPri;
 }
 
 .text--big {
-    @include text(24px);
-
-    @media (max-width: 768px) {
-        @include text(15px);
-    }
+    @include text(20px);
+    font-weight: normal;
 }
 
 .text {
-    @include text;
+    @include text();
+}
 
-    @media (max-width: 768px) {
-        @include text(14px);
-    }
+.text--small {
+    @include text(14px);
 }
 
 .title--big {
-    @include title(56px);
-
-    @media (max-width: 768px) {
-        @include title(26px);
-    }
+    @include title(44px);
 }
 
 .title {
-    @include title;
-
-    @media (max-width: 768px) {
-        @include title(24px);
-    }
+    @include title();
 }
 
-
-.background {
-    background-image: url(../background.jpg);
-    background-repeat: no-repeat;
-}
-.sep {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    background-image: none;
+.title--small {
+    @include title(28px);
 }
 
+.button {
+    display: block;
+    width: 30%;
+    height: 60px;
+    font-size: 20px;
+    font-weight: normal;
+    color: $textColorSec;
+    background-color: $highlightColor;
+    text-transform: uppercase;
+    border-radius: 4px;
+    border: none;
+    margin-top: 2vw;
+    transition: all ease .4s;
+    cursor: pointer;
 
-
-.sep3 {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background-image: linear-gradient(to bottom, rgb(250, 242, 238), rgb(250, 242, 238), var.$bgColor);
-
-    @media (max-width: 768px) {
-        margin-top: -5px;
+    &:hover {
+        background-color: lighten($highlightColor, 10%);
     }
 }

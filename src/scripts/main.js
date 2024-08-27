@@ -1,46 +1,40 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const chars = document.querySelectorAll('[data-perso-button]');
+    const buttons = document.querySelectorAll('[data-tab-button');
+    const questions = document.querySelectorAll('[data-faq-question]');
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
-            return;
-        }
-        entry.target.classList.remove('in-view');
-        });
-    });
-
-    const allAnimatedElements = document.querySelectorAll('.animate');
-    
-    allAnimatedElements.forEach((element) => observer.observe(element));
-
-
-    //abas
-    for (let i = 0; i < pers.length; i++) {
-        persos[i].addEventListener('click', function(perso) {
-            const currentperso = perso.currentTarget.dataset.persoButton;
-            const persoacter = document.querySelector(`[data-perso-id=${currentperso}]`)
-            hideperso();
-            persoacter.classList.add('pers__content__data__select--crt')
-            hidepersoButton();
-            perso.currentTarget.classList.add('crt')
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', function(botao) {
+            const abaAlvo = botao.target.dataset.tabButton;
+            const aba = document.querySelector(`[data-tab-id=${abaAlvo}]`)
+            escondeTodasAbas();
+            aba.classList.add('characters__content--is--active');
+            removeBotaoAtivo()
+            botao.target.classList.add('characters__tab__button--is--active');
         })
     }
-});
 
-function hidePersoButton() {
-    const pers = document.querySelectorAll('[data-perso-button]');
+    for (let i = 0;i < questions.length; i++) {
+        questions[i].addEventListener('click', abreOuFechaResposta);
+    }
+}) 
 
-    for (let i = 0; i < persos.length; i++) {
-        pers[i].classList.remove('crt')
+function abreOuFechaResposta(elemento) {
+    const classe = 'faq__questions__item--is--open';
+    const elementoPai = elemento.target.parentNode;
+
+    elementoPai.classList.toggle(classe)
+}
+
+function removeBotaoAtivo() {
+    const buttons = document.querySelectorAll('[data-tab-button');
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].classList.remove('characters__tab__button--is--active');
     }
 }
 
-function hideperso() {
-    const persInfo = document.querySelectorAll('[data-perso-id]');
-
-    for (let i = 0; i < persosInfo.length; i++) {
-        persInfo[i].classList.remove('pers__content__data__select--crt')
-    }
+function escondeTodasAbas() {
+    const tabsContainer = document.querySelectorAll('[data-tab-id');
+        for (let i = 0; i < tabsContainer.length; i++) {
+            tabsContainer[i].classList.remove('characters__content--is--active')
+        }
 }
