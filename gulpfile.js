@@ -1,35 +1,23 @@
-const gulp = require('gulp');
+const Gulp = require("gulp");
+const imagemin = require("gulp-imagemin");
 const sass = require('gulp-sass')(require('sass'));
-const imagemin = require('gulp-imagemin');
-const uglify = require('gulp-uglify');
+const Imageminimo = require("gulp-imagemin");
 
-function scripts() {
-    return gulp.src('./src/js/*.js')
-    .pipe(uglify())
-    .pipe(gulp.dest('./dist/js'))
+
+function Compilasass(){
+    return Gulp.src("./src/styles/*.scss")
+        .pipe(sass({outputStyle: "compressed"}))
+        .pipe(Gulp.dest("./dist/styles"));
 }
 
-function compileSass() {
-    return gulp.src('./src/style/*.scss')
-    .pipe(sass({ outputStyle: 'compressed'}))
-    .pipe(gulp.dest('./dist/style'))
+function Imagemmin(){
+    return Gulp.src("./src/images/**")
+        .pipe(Imageminimo())
+        .pipe(Gulp.dest("./dist/images"));
 }
 
-function images() {
-    return gulp.src('./src/image/**/*', {encoding: false})
-    .pipe(imagemin())
-    .pipe(gulp.dest('./dist/image'))
+exports.default = Gulp.parallel(Compilasass, Imagemmin);
+
+exports.watch = function(){
+    Gulp.watch("./src/styles/*.scss", Gulp.parallel(Compilasass))
 }
-
-function watchFiles() {
-    gulp.watch('./src/style/*.scss', gulp.parallel(compileSass))
-    gulp.watch('./src/image/**/*', gulp.parallel(images))
-    gulp.watch('./src/js/*.js', gulp.parallel(scripts))
-}
-
-exports.compileSass = compileSass;
-exports.watch = watchFiles;
-exports.images = images;
-exports.scripts = scripts;
-
-exports.default = gulp.parallel(compileSass,images,scripts);

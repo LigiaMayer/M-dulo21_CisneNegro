@@ -1,190 +1,73 @@
 <!DOCTYPE html>
-<html lang="pt-Br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/styles/main.scss">
-    <title>Cisne negro - projeto EBAC</title>
+    <title>Cisne Negro - Projeto Ebac</title>
+    <link rel="stylesheet" href="dist/styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+    
 </head>
 <body>
-    <header class="header">
-        <div class="header__container">
-            <ul class="header__links">
-                <li class="header__links__item">
-                    <a href="#" class="button">Cadastrar</a>
-                </li>
-                <li class="header__links__item">
-                    <a href="#" class="button">Entrar</a>
-                </li>
-            </ul>
-        </div>
+    <header>
+        <ul>
+            <li>
+                <a href="#Home">Home</a>
+            </li>
+            <li>
+                <a href="#Sobre">Sobre o Filme</a>
+            </li>
+            <li>
+                <a href="#Personagens">Personagens</a>
+            </li>
+        </ul>
     </header>
-    <section class="hero">
-        <div class="hero__background"></div>
-            <div class="hero__content">
-                <h2 class="title--big">Cisne Negro</h2>
-                <p class="text--big">Uma bailarina luta para manter sua sanidade enquanto se torna obcecada pela perfeição no palco.</p>
-                <button class="button"> Assistir agora </button>
-            </div>
+</body>
+    <section class="Home" id="Home">
+        <h1>Cisne Negro</h1>
     </section>
-    <section class="synopsis">
-        <div class="synopsis__content">
-            <h2 class="title">Sinopse</h2>
-            <p class="text--big"> Nina Sayers (Natalie Portman), uma bailarina dedicada, é escolhida para o papel principal em "O Lago dos Cisnes". Para interpretar tanto o Cisne Branco quanto o Cisne Negro, ela precisa de uma transformação radical. A pressão para se destacar e a competição feroz com a nova bailarina Lily (Mila Kunis) causam-lhe grande estresse. Nina começa a perder o controle da realidade, sua mente mergulha em uma espiral de paranoia e autodestruição. O desejo obsessivo de alcançar a perfeição faz com que a linha entre a identidade real e a ficcional se desfaça, levando-a a um trágico e perturbador desfecho. </p>
-        </div>
+    <section class="Sobre" id="Sobre">
+        <h2>Sinopse</h2>
+        <div class="container">
+            <img src="./dist/images/gif_2.gif" alt="Esperando no trem">
+            <p>Nina Sayers (Natalie Portman) é uma talentosa bailarina que, após uma competição intensa, consegue o papel principal na produção de "O Lago dos Cisnes" da companhia de balé. No entanto, a oportunidade vem com uma enorme pressão: para interpretar tanto o Cisne Branco quanto o Cisne Negro, Nina precisa demonstrar um equilíbrio perfeito entre a graça e a sensualidade.
 
-    </section>
-    <section class="characters">
-        <div class="characters__bg">
-            <h2 class="title">Conheça os personagens</h2>
-            <nav class="characters__tab">
-                <button data-tab-button="Nina" class="characters__tab__button characters__tab__button--is--active">
-                    Nina
-                </button>
-                <button data-tab-button="Beth" class="characters__tab__button">
-                    Beth
-                </button>
-                <button data-tab-button="Thomas" class="characters__tab__button">
-                    Thomas
-                </button>
-                <button data-tab-button="Erica" class="characters__tab__button">
-                    Erica
-                </button>
-                <button data-tab-button="Lily" class="characters__tab__button">
-                    Lily
-                </button>
-            </nav>
-            <div data-tab-id="nina" class="characters__content characters__content--is--active">
-                <img src="src/img/nina.webp" alt="Nina Sayers">
-                <p class="text--big">
-                    Nina Sayers é uma bailarina dedicada e perfeccionista que ganha o papel principal em "O Lago dos Cisnes". Para interpretar tanto o Cisne Branco quanto o Cisne Negro, ela precisa se transformar radicalmente. A pressão para alcançar a perfeição e a rivalidade com Lily a levam a um colapso psicológico. A busca obsessiva pela perfeição faz com que Nina perca o controle da realidade, resultando em uma jornada perturbadora e trágica.
-                </p>
-            </div>
-            <div data-tab-id="beth" class="characters__content">
-                <img src="src/img/bethcisnenegro.webp" alt="Beth Macintyre">
-                <p class="text--big">
-                    Beth Macintyre é uma bailarina experiente e antiga estrela do Lago dos Cisnes. Ela é uma das principais concorrentes de Nina para o papel do Cisne Negro. Beth representa o sucesso e o prestígio que Nina almeja, mas também simboliza as complexidades e as pressões do mundo do balé. Sua presença e experiência fazem dela uma figura significativa na jornada de Nina.
-                </p>
-            </div>
-            <div data-tab-id="thomas" class="characters__content">
-                <img src="src/img/thomascisnenegro.webp" alt="Thomas Leroy">
-                <p class="text--big">
-                    Thomas Leroy é o diretor artístico da companhia de balé e o responsável por escolher Nina para o papel principal em **"O Lago dos Cisnes"**. Ele é conhecido por ser exigente e manipulador, pressionando Nina para se transformar completamente e dominar tanto o Cisne Branco quanto o Cisne Negro. Sua visão rígida e suas exigências contribuem para o estresse e o colapso psicológico de Nina.
-                </p>
-            </div>
-            <div data-tab-id="erica" class="characters__content">
-                <img src="src/img/erica.jpg" alt="Erica Sayers">
-                <p class="text--big">
-                    Erica Sayers é a mãe de Nina e uma figura central em sua vida. Ela é uma ex-bailarina que, agora, vive por meio das ambições da filha. Erica exerce uma pressão constante sobre Nina, forçando-a a atingir padrões elevados e a se tornar a bailarina que ela sempre quis ser. Sua presença dominadora e suas expectativas contribuem para o crescente desespero de Nina.
-                </p>
-            </div>
-            <div data-tab-id="lily" class="characters__content">
-                <img src="src/img/lily.webp" alt="Lily">
-                <p class="text--big">
-                    Lily é uma nova bailarina na companhia que compete com Nina pelo papel do Cisne Negro. Com uma atitude confiante e um estilo mais descontraído, Lily representa o lado mais livre e selvagem da dança. Sua presença e a percepção de que ela pode ser uma ameaça para o papel de Nina intensificam a pressão e a paranoia de Nina, contribuindo para sua deterioração mental.
-                </p>
-            </div>
-    </section>
-    <section class="available_devices">
-        <h2 class="title">Assista aonde quiser</h2>
-        <ul class="available_devices__list">
-            <li class="available_devices__item">
-                <h4 class="title--small">Computador</h4>
-                <ul class="text--big">
-                    <li>Chrome OS</li>
-                    <li>MacOS</li>
-                    <li>PC Windows</li>
-                </ul>
-            </li>
-            <li class="available_devices__item">
-                <h4 class="title--small">Celular</h4>
-                <ul class="text--big">
-                    <li>Tablets Amazon Fire</li>
-                    <li>Celulares e Tablets Android</li>
-                    <li>iPhone e iPad</li>
-                </ul>
-            </li>
-            <li class="available_devices__item">
-                <h4 class="title--small">Televisão</h4>
+                À medida que a estreia se aproxima, Nina enfrenta a pressão extrema de seu diretor exigente, Thomas Leroy (Vincent Cassel), e a competição feroz com sua colega de elenco, Lily (Mila Kunis). Enquanto Nina luta para atender às expectativas cada vez mais altas, sua própria sanidade começa a desmoronar. A linha entre a realidade e a fantasia se torna cada vez mais tênue, e Nina se vê em uma espiral de paranoia e auto-destruição.
                 
-            </li>
-        </ul>
-        <p></p>
+                O desejo obsessivo de alcançar a perfeição transforma sua jornada em uma batalha psicológica intensa, culminando em um desfecho trágico e perturbador que desafia a percepção do público sobre a identidade e a sanidade.</p>
+        </div>
     </section>
-    <section class="faq">
-        <h2 class="title">Curiosidades</h2>
-        <ul class="faq_questions">       
-            <li class="faq__questions__item">
-                <li class="faq__questions__item">
-                    <div class="faq__questions__item__questions" data-faq-question>
-                        Como "Cisne Negro" explora a jornada psicológica da protagonista?
-                    </div>
-                    <div class="faq__questions__item__answer text">
-                        <p>"Cisne Negro" explora a jornada psicológica de Nina Sayers ao mergulhar profundamente em sua luta para alcançar a perfeição no balé. O filme usa uma narrativa intensa e visualmente rica para mostrar a transformação de Nina, desde sua dedicação obsessiva até seu eventual colapso mental. A pressão para interpretar tanto o Cisne Branco quanto o Cisne Negro leva Nina a uma espiral de paranoia e auto-destruição, com a narrativa focando em sua deterioração emocional e psicológica.</p>
-                    </div>
-                </li>
-                <li class="faq__questions__item">
-                    <div class="faq__questions__item__questions" data-faq-question>
-                        Quais atores principais no filme interpretam personagens baseados em pessoas reais, e quem são essas pessoas?
-                    </div>
-                    <div class="faq__questions__item__answer text">
-                        <p>"Cisne Negro" é uma obra ficcional e não se baseia em pessoas reais, mas em personagens criados para explorar temas como perfeição e sanidade. Natalie Portman interpreta Nina Sayers, uma bailarina fictícia, enquanto Mila Kunis faz o papel de Lily, uma concorrente. Outros atores principais, como Vincent Cassel e Barbara Hershey, interpretam personagens originais como Thomas Leroy e Erica Sayers, respectivamente.</p>
-                    </div>
-                </li>
-                <li class="faq__questions__item">
-                    <div class="faq__questions__item__questions" data-faq-question>
-                        Quais foram algumas das mudanças significativas feitas durante a produção de "Cisne Negro"?
-                    </div>
-                    <div class="faq__questions__item__answer text">
-                        <p>"Cisne Negro" passou por várias mudanças criativas durante a produção para intensificar sua abordagem psicológica e dramática. A narrativa foi ajustada para destacar a transformação psicológica de Nina e a pressão intensa do mundo do balé. O filme utilizou técnicas visuais e simbólicas para enfatizar a luta interna da protagonista e seu conflito com a realidade. Essas mudanças ajudaram a criar uma experiência mais imersiva e perturbadora para o público.</p>
-                    </div>
-                </li>
-                <li class="faq__questions__item">
-                    <div class="faq__questions__item__questions" data-faq-question>
-                        Como Natalie Portman se preparou para o papel de Nina Sayers?
-                    </div>
-                    <div class="faq__questions__item__answer text">
-                        <p>Para se preparar para o papel de Nina Sayers, Natalie Portman se dedicou a um rigoroso treinamento de balé. Ela treinou por várias horas diariamente durante meses para alcançar o nível técnico exigido para a dança. Portman também trabalhou com um treinador de balé e um consultor de movimento para garantir a autenticidade de sua performance. Além disso, ela estudou a psicologia do personagem para capturar a intensidade emocional e a complexidade mental de Nina.</p>
-                    </div>
-                </li>
-                <li class="faq__questions__item">
-                    <div class="faq__questions__item__questions" data-faq-question>
-                        Quais prêmios e reconhecimentos "Cisne Negro" recebeu?
-                    </div>
-                    <div class="faq__questions__item__answer text">
-                        <p>"Cisne Negro" foi amplamente aclamado pela crítica e recebeu vários prêmios e reconhecimentos. Natalie Portman ganhou o Oscar de Melhor Atriz por sua interpretação de Nina Sayers. O filme também foi indicado para Melhor Filme e Melhor Direção (Darren Aronofsky). Além disso, recebeu o Globo de Ouro de Melhor Filme - Drama e vários outros prêmios de associações de críticos e festivais de cinema.</p>
-                    </div>
-                </li>
-        </ul>
+    <section class="personagens" id="Personagens">
+        <h2>Personagens</h2>
+        <div class="container">
+            <div class="container-item">
+                <img src="./src/images/nina.webp" alt="Nina">
+                <h3>Nina</h3>
+            </div>
+            <div class="container-item">
+                <img src="./src/images/bethcisnenegro.webp" alt="Beth">
+                <h3>Beth</h3>
+            </div>
+            <div class="container-item">
+                <img src="./src/images/erica.jpg" alt="Erica">
+                <h3>Erica</h3>
+            </div>
+            <div class="container-item">
+                <img src="./src/images/lily.webp" alt="Lily">
+                <h3>Lily</h3>
+            </div>
+            <div class="container-item">
+                <img src="./src/images/thomascisnenegro.webp" alt="Thomas">
+                <h3>Thomas</h3>
+            </div>
+        </div>
     </section>
     <footer class="footer">
-        <div class="footer__container">
-            <img class="footer__logo" src="./src/img/disneyplus.jpg" alt="Disney+" style="width: 15%; height: auto;">
-            <ul class="footer__links">
-                <li class="footer__links__item">
-                </li>
-                <li class="footer__links__item">
-                    <a href="#" class="text--small">Termos e Condições de Uso</a>
-                </li>
-                <li class="footer__links__item">
-                    <a href="" class="text--small">Política de privacidade</a>
-                </li>
-                <li class="footer__links__item">
-                    <a href="#" class="text--small">Ajuda</a>
-                </li>
-                
->
-    <p class="text--small">
-        ® 2024 Disney+. Todos os direitos reservados. Serviço de streaming por assinatura. Conteúdo sujeito a disponibilidade e alterações.
-    </p>
-    <p class="text--small">
-        Disney+ é um serviço de streaming pago e está sujeito a termos e condições. Disney+ é comercializado por The Walt Disney Company Brasil.
-    </p>
-
+        <div class="footer--container">
+            <p> Feito por Ligia (Aluna EBAC)
+            </p>
         </div>
     </footer>
-
-    <script src="./dist/gulpfile.dev.js"></script>
-</body>
-
 </html>
